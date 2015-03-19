@@ -4,8 +4,54 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f0c2741948ac5510d5d905978bdfdf08",
+    "hash": "d337f3fa5f87b99b2c66353e5dc91a16",
     "packages": [
+        {
+            "name": "cocur/slugify",
+            "version": "v0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cocur/slugify.git",
+                "reference": "ba0ce8219f3c3a2ce62db254a90644fe63b213fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/ba0ce8219f3c3a2ce62db254a90644fe63b213fb",
+                "reference": "ba0ce8219f3c3a2ce62db254a90644fe63b213fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Cocur": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Eckerstorfer",
+                    "email": "florian@theroadtojoy.at",
+                    "homepage": "http://florianeckerstorfer.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ivo Bathke",
+                    "email": "ivo.bathke@gmail.com"
+                }
+            ],
+            "description": "Converts a string into a slug.",
+            "keywords": [
+                "slug",
+                "slugify"
+            ],
+            "time": "2013-03-08 07:15:42"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.3",
@@ -1160,6 +1206,62 @@
             "time": "2015-03-03 21:53:13"
         },
         {
+            "name": "ongr/cookies-bundle",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ongr-io/CookiesBundle.git",
+                "reference": "2907e3759e84ceeb60bd4727287babd8feb32809"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ongr-io/CookiesBundle/zipball/2907e3759e84ceeb60bd4727287babd8feb32809",
+                "reference": "2907e3759e84ceeb60bd4727287babd8feb32809",
+                "shasum": ""
+            },
+            "require": {
+                "cocur/slugify": "0.2.2",
+                "php": ">=5.4",
+                "symfony/assetic-bundle": "~2.3",
+                "symfony/monolog-bridge": "~2.4",
+                "symfony/monolog-bundle": "~2.4",
+                "symfony/symfony": "~2.6",
+                "tedivm/stash-bundle": "0.4.*"
+            },
+            "require-dev": {
+                "ongr/ongr-strict-standard": "~1.0.0-beta",
+                "phpunit/phpunit": "~4.1",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "ONGR\\CookiesBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ONGR team",
+                    "homepage": "http://www.nfq.com"
+                }
+            ],
+            "description": "Cookie model for using cookies as Symfony services",
+            "homepage": "http://ongr.io",
+            "keywords": [
+                "cookie",
+                "cookies",
+                "model",
+                "ongr",
+                "service",
+                "symfony"
+            ],
+            "time": "2015-01-15 10:22:03"
+        },
+        {
             "name": "ongr/elasticsearch-bundle",
             "version": "v0.8.1",
             "source": {
@@ -1897,6 +1999,121 @@
                 "framework"
             ],
             "time": "2015-02-02 18:02:30"
+        },
+        {
+            "name": "tedivm/stash",
+            "version": "v0.12.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/Stash.git",
+                "reference": "5b830f6a0e4626e5cd02c862d37721ca16820a13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/Stash/zipball/5b830f6a0e4626e5cd02c862d37721ca16820a13",
+                "reference": "5b830f6a0e4626e5cd02c862d37721ca16820a13",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.1.*",
+                "phpunit/phpunit": "4.3.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stash\\": "src/Stash/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                },
+                {
+                    "name": "Josh Hall-Bachner",
+                    "email": "charlequin@gmail.com"
+                }
+            ],
+            "description": "The place to keep your cache.",
+            "homepage": "http://github.com/tedious/Stash",
+            "keywords": [
+                "apc",
+                "cache",
+                "caching",
+                "memcached",
+                "redis",
+                "sessions"
+            ],
+            "time": "2015-01-17 07:51:57"
+        },
+        {
+            "name": "tedivm/stash-bundle",
+            "version": "v0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/TedivmStashBundle.git",
+                "reference": "c8bca57685e9cca3dfb109db329aaec52cf7b3e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/TedivmStashBundle/zipball/c8bca57685e9cca3dfb109db329aaec52cf7b3e4",
+                "reference": "c8bca57685e9cca3dfb109db329aaec52cf7b3e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/config": ">=2.1,<3.0",
+                "symfony/dependency-injection": ">=2.1,<3.0",
+                "symfony/http-kernel": ">=2.1,<3.0",
+                "tedivm/stash": "0.12.*"
+            },
+            "require-dev": {
+                "doctrine/cache": "~1.0",
+                "fabpot/php-cs-fixer": "0.4.0",
+                "phpunit/phpunit": "4.1.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Tedivm\\StashBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                },
+                {
+                    "name": "Josh Hall-Bachner",
+                    "email": "jhallbachner@gmail.com"
+                }
+            ],
+            "description": "Incorporates the Stash caching library into Symfony.",
+            "homepage": "http://github.com/tedious/TedivmStashBundle",
+            "keywords": [
+                "apc",
+                "cache",
+                "caching",
+                "memcached",
+                "redis",
+                "sessions",
+                "stash",
+                "symfony"
+            ],
+            "time": "2014-12-08 07:00:03"
         },
         {
             "name": "twig/extensions",

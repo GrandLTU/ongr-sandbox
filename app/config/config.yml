@@ -206,3 +206,18 @@ ongr_filter_manager:
                     - { label: Price descending, field: price, order: desc }
                     - { label: Title ascending, field: title }
                     - { label: Title descending, field: title, order: desc }
+
+parameters:
+    ongr_demo.cookie.foo.name: ongr_demo_foo
+    ongr_demo.cookie.foo.defaults: # Defaults section is optional
+        http_only: false
+        expires_interval: P5DT4H # 5 days and 4 hours
+
+services:
+    ongr_demo.cookie.foo:
+        class: %ongr_cookie.json.class%
+        arguments: [ %ongr_demo.cookie.foo.name% ]
+        calls:
+            - [setDefaults, [%ongr_demo.cookie.foo.defaults%]] # Optional
+        tags:
+            - { name: ongr_cookie.cookie }

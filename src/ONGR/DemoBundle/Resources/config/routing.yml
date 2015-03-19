@@ -1,3 +1,6 @@
+test:
+    path: /test
+    defaults: { _controller: ONGRDemoBundle:Test:index }
 #Content controller
 onager_demo_homepage:
     path:     /
