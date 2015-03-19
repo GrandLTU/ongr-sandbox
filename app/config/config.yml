@@ -161,6 +161,11 @@ ongr_elasticsearch:
             debug: "%kernel.debug%"
             mappings:
                 - ONGRDemoBundle
+        monitoring:
+            connection: default
+            debug: true
+            mappings:
+                - ONGRMonitoringBundle
 
 ongr_filter_manager:
     managers:
@@ -206,3 +211,21 @@ ongr_filter_manager:
                     - { label: Price descending, field: price, order: desc }
                     - { label: Title ascending, field: title }
                     - { label: Title descending, field: title, order: desc }
+
+ongr_monitoring:
+    es_manager: monitoring
+    commands:
+        commands:
+            - ongr:monitoring:metrics:collect
+    metric_collector:
+        metrics:
+            document_count:
+                - { name: foo, document: es.manager.default.product }
+            date_metric:
+                - { name: date_metric, document: es.manager.default.product }
+
+services:
+    ongr_demo.metric.date:
+        class: ONGR\DemoBundle\Metrics\DateMetric
+        tags:
+            - { name: ongr_monitoring.metric, metric: date_metric }
