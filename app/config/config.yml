@@ -235,43 +235,6 @@ ongr_elasticsearch:
             mappings:
                 - ONGRTranslationsBundle
 
-ongr_filter_manager:
-    managers:
-        product_list:
-            filters:
-                - category
-                - wear_title
-                - search
-                - pager
-                - sorting
-            repository: 'es.manager.oxid.product'
-    filters:
-        choice:
-            wear_title:
-                request_field: 'title'
-                field: title
-        match:
-            search:
-                request_field: 'q'
-                field: title
-        document_field:
-            category:
-                request_field: 'document'
-                field: categories
-        pager:
-            pager:
-                request_field: 'page'
-                count_per_page: 9
-                max_pages: 10
-        sort:
-            sorting:
-                request_field: 'sort'
-                choices:
-                    - { label: Price ascending, field: price, default: true }
-                    - { label: Price descending, field: price, order: desc }
-                    - { label: Title ascending, field: title }
-                    - { label: Title descending, field: title, order: desc }
-
 ongr_translations:
     managed_locales: ["lt", "de", "en"]
     repository: 'es.manager.translation.translation'
@@ -286,6 +249,19 @@ ongr_connections:
             mysql:
                 connection: default
                 table_name: ongr_sync_storage
+    pipelines:
+        oxid:
+            elasticsearchManager: @es.manager.oxid
+            types:
+                product:
+                    document_class: ONGRDemoOXIDBundle:ProductDocument
+                    entity_class: DemoOXIDBundle:Article
+                category:
+                    document_class: ONGRDemoOXIDBundle:CategoryDocument
+                    entity_class: DemoOXIDBundle:Category
+                content:
+                    document_class: ONGRDemoOXIDBundle:ContentDocument
+                    entity_class: DemoOXIDBundle:Content
 
 ongr_oxid:
     database_mapping:
@@ -295,4 +271,3 @@ ongr_oxid:
                 @lang_tag: ''
             shop_id: oxbaseshop
             lang_id: 0
-    entity_namespace: ONGROXIDConnectorBundle

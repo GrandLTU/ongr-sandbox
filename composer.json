@@ -8,6 +8,24 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:GrandLTU/ElasticsearchBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:GrandLTU/ElasticsearchDSL.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:GrandLTU/ConnectionsBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:GrandLTU/OXIDConnectorBundle.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "~2.6",
@@ -21,12 +39,14 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "ongr/elasticsearch-bundle": "~0.9",
         "ongr/filter-manager-bundle": "~0.4",
         "ongr/content-bundle": "~0.4",
         "ongr/router-bundle": "~0.3",
         "ongr/translations-bundle": "dev-master",
-        "ongr/oxid-connector-bundle": "dev-master"
+        "ongr/oxid-connector-bundle": "dev-es_stable_rc",
+        "ongr/elasticsearch-bundle": "dev-rc_stable_merged as v0.10.1",
+        "ongr/elasticsearch-dsl": "dev-suggester as dev-master",
+        "ongr/connections-bundle": "dev-es-stable-rc as v0.8.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",

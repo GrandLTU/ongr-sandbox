@@ -1,7 +1,7 @@
 <?php
 
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\HttpKernel\Kernel;
 
 class AppKernel extends Kernel
 {
@@ -21,7 +21,6 @@ class AppKernel extends Kernel
             new ONGR\DemoBundle\ONGRDemoBundle(),
             new ONGR\ElasticsearchBundle\ONGRElasticsearchBundle(),
             new ONGR\RouterBundle\ONGRRouterBundle(),
-            new ONGR\FilterManagerBundle\ONGRFilterManagerBundle(),
             new ONGR\ContentBundle\ONGRContentBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new ONGR\TranslationsBundle\ONGRTranslationsBundle(),

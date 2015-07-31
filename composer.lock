@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ba653f1f83e96b31ab219b8ffd8c857",
+    "hash": "6716ce38046fdfbc3c8e34182956bd1d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1153,16 +1153,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.14.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "b287fbbe1ca27847064beff2bad7fb6920bf08cc"
+                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b287fbbe1ca27847064beff2bad7fb6920bf08cc",
-                "reference": "b287fbbe1ca27847064beff2bad7fb6920bf08cc",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dc5150cc608f2334c72c3b6a553ec9668a4156b0",
+                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0",
                 "shasum": ""
             },
             "require": {
@@ -1199,7 +1199,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14.x-dev"
+                    "dev-master": "1.15.x-dev"
                 }
             },
             "autoload": {
@@ -1225,25 +1225,26 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-06-19 13:29:54"
+            "time": "2015-07-12 13:54:09"
         },
         {
             "name": "ongr/connections-bundle",
-            "version": "v0.8.1",
+            "version": "dev-es-stable-rc",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ongr-io/ConnectionsBundle.git",
-                "reference": "d8db145e758479526a8c372905f41773b72d5b7d"
+                "url": "https://github.com/GrandLTU/ConnectionsBundle.git",
+                "reference": "9b16faf94e355a5ffc7446ceb68d4150acfeb8d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ongr-io/ConnectionsBundle/zipball/d8db145e758479526a8c372905f41773b72d5b7d",
-                "reference": "d8db145e758479526a8c372905f41773b72d5b7d",
+                "url": "https://api.github.com/repos/GrandLTU/ConnectionsBundle/zipball/9b16faf94e355a5ffc7446ceb68d4150acfeb8d4",
+                "reference": "9b16faf94e355a5ffc7446ceb68d4150acfeb8d4",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "~2.5",
-                "ongr/elasticsearch-bundle": "~0.9",
+                "ongr/elasticsearch-bundle": "dev-rc_stable_merged as v0.10.1",
+                "ongr/elasticsearch-dsl": "dev-suggester as dev-master",
                 "ongr/router-bundle": "~0.4",
                 "php": ">=5.4",
                 "symfony/monolog-bundle": "~2.0",
@@ -1264,7 +1265,6 @@
                     "ONGR\\ConnectionsBundle\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1275,7 +1275,10 @@
                 }
             ],
             "description": "Connections bundle for ONGR platform",
-            "time": "2015-06-23 06:52:49"
+            "support": {
+                "source": "https://github.com/GrandLTU/ConnectionsBundle/tree/es-stable-rc"
+            },
+            "time": "2015-07-31 08:17:25"
         },
         {
             "name": "ongr/content-bundle",
@@ -1325,22 +1328,23 @@
         },
         {
             "name": "ongr/elasticsearch-bundle",
-            "version": "v0.10.1",
+            "version": "dev-rc_stable_merged",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ongr-io/ElasticsearchBundle.git",
-                "reference": "5c3889eb4ad529b748730365375654814eb1331c"
+                "url": "https://github.com/GrandLTU/ElasticsearchBundle.git",
+                "reference": "590bb3a72ac084390b42f92135c8f3e914ee59bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ongr-io/ElasticsearchBundle/zipball/5c3889eb4ad529b748730365375654814eb1331c",
-                "reference": "5c3889eb4ad529b748730365375654814eb1331c",
+                "url": "https://api.github.com/repos/GrandLTU/ElasticsearchBundle/zipball/590bb3a72ac084390b42f92135c8f3e914ee59bf",
+                "reference": "590bb3a72ac084390b42f92135c8f3e914ee59bf",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "~1.2",
                 "doctrine/inflector": "~1.0",
                 "elasticsearch/elasticsearch": "~1.0",
+                "ongr/elasticsearch-dsl": "dev-master",
                 "php": ">=5.4",
                 "symfony/class-loader": "~2.7",
                 "symfony/console": "~2.7",
@@ -1366,7 +1370,6 @@
                     "ONGR\\ElasticsearchBundle\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1378,7 +1381,61 @@
             ],
             "description": "elasticsearch php client bundle for Symfony 2.",
             "homepage": "http://ongr.io",
-            "time": "2015-06-22 06:14:15"
+            "support": {
+                "source": "https://github.com/GrandLTU/ElasticsearchBundle/tree/rc_stable_merged"
+            },
+            "time": "2015-07-29 10:08:05"
+        },
+        {
+            "name": "ongr/elasticsearch-dsl",
+            "version": "dev-suggester",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrandLTU/ElasticsearchDSL.git",
+                "reference": "4658863e0cf9bf20f69a22283383553c38489994"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrandLTU/ElasticsearchDSL/zipball/4658863e0cf9bf20f69a22283383553c38489994",
+                "reference": "4658863e0cf9bf20f69a22283383553c38489994",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/options-resolver": "~2.7",
+                "symfony/serializer": "~2.7"
+            },
+            "require-dev": {
+                "ongr/ongr-strict-standard": "~2.0",
+                "phpunit/phpunit": "~4.4",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ONGR\\ElasticsearchDSL\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "ONGR\\ElasticsearchDSL\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ONGR team",
+                    "homepage": "http://www.ongr.io"
+                }
+            ],
+            "description": "Elasticsearch DSL library",
+            "homepage": "http://ongr.io",
+            "support": {
+                "source": "https://github.com/GrandLTU/ElasticsearchDSL/tree/suggester"
+            },
+            "time": "2015-07-15 07:34:16"
         },
         {
             "name": "ongr/filter-manager-bundle",
@@ -1426,23 +1483,25 @@
         },
         {
             "name": "ongr/oxid-connector-bundle",
-            "version": "dev-master",
+            "version": "dev-es_stable_rc",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ongr-io/OXIDConnectorBundle.git",
-                "reference": "de348b96f20abe174572dc6d77c2f1f25f129bf5"
+                "url": "https://github.com/GrandLTU/OXIDConnectorBundle.git",
+                "reference": "3727e859c14a1bf8cec6e62781b42751654a122a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ongr-io/OXIDConnectorBundle/zipball/de348b96f20abe174572dc6d77c2f1f25f129bf5",
-                "reference": "de348b96f20abe174572dc6d77c2f1f25f129bf5",
+                "url": "https://api.github.com/repos/GrandLTU/OXIDConnectorBundle/zipball/3727e859c14a1bf8cec6e62781b42751654a122a",
+                "reference": "3727e859c14a1bf8cec6e62781b42751654a122a",
                 "shasum": ""
             },
             "require": {
                 "doctrine/doctrine-bundle": "~1.2",
-                "ongr/connections-bundle": "~0.6",
+                "ongr/connections-bundle": "dev-es-stable-rc as v0.8.1",
                 "ongr/content-bundle": "~0.4",
-                "ongr/router-bundle": "~0.3",
+                "ongr/elasticsearch-bundle": "dev-rc_stable_merged as v0.10.1",
+                "ongr/elasticsearch-dsl": "dev-suggester as dev-master",
+                "ongr/router-bundle": "~0.4",
                 "php": ">=5.4",
                 "symfony/symfony": "~2.6"
             },
@@ -1457,7 +1516,6 @@
                     "ONGR\\OXIDConnectorBundle\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1469,7 +1527,10 @@
             ],
             "description": "OXID connector for ONGR framework",
             "homepage": "http://ongr.io",
-            "time": "2015-06-29 07:16:19"
+            "support": {
+                "source": "https://github.com/GrandLTU/OXIDConnectorBundle/tree/es_stable_rc"
+            },
+            "time": "2015-07-31 09:41:55"
         },
         {
             "name": "ongr/router-bundle",
@@ -1569,16 +1630,16 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "876bf0899d01feacd2a2e83f04641e51350099ef"
+                "reference": "3313af5935dbc560fab845b76a1ca351b47855af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/876bf0899d01feacd2a2e83f04641e51350099ef",
-                "reference": "876bf0899d01feacd2a2e83f04641e51350099ef",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/3313af5935dbc560fab845b76a1ca351b47855af",
+                "reference": "3313af5935dbc560fab845b76a1ca351b47855af",
                 "shasum": ""
             },
             "require": {
@@ -1611,7 +1672,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2014-07-24 09:48:15"
+            "time": "2015-07-30 09:57:46"
         },
         {
             "name": "psr/log",
@@ -2047,16 +2108,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "932b6e7499c670f4db6d0b871477a4a3ca161e74"
+                "reference": "969d709ad428076bf1084e386dc26dd904d9fb84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/932b6e7499c670f4db6d0b871477a4a3ca161e74",
-                "reference": "932b6e7499c670f4db6d0b871477a4a3ca161e74",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/969d709ad428076bf1084e386dc26dd904d9fb84",
+                "reference": "969d709ad428076bf1084e386dc26dd904d9fb84",
                 "shasum": ""
             },
             "require": {
@@ -2165,7 +2226,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-06-11 21:15:28"
+            "time": "2015-07-13 19:27:49"
         },
         {
             "name": "twig/extensions",
@@ -2476,16 +2537,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.1.6",
+            "version": "2.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "631e365cf26bb2c078683e8d9bcf8bc631ac4d44"
+                "reference": "5bd48b86cd282da411bb80baac1398ce3fefac41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/631e365cf26bb2c078683e8d9bcf8bc631ac4d44",
-                "reference": "631e365cf26bb2c078683e8d9bcf8bc631ac4d44",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/5bd48b86cd282da411bb80baac1398ce3fefac41",
+                "reference": "5bd48b86cd282da411bb80baac1398ce3fefac41",
                 "shasum": ""
             },
             "require": {
@@ -2534,20 +2595,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-19 07:11:55"
+            "time": "2015-07-26 12:54:47"
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb"
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/a923bb15680d0089e2316f7a4af8f437046e96bb",
-                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
                 "shasum": ""
             },
             "require": {
@@ -2581,7 +2642,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2015-04-02 05:19:05"
+            "time": "2015-06-21 13:08:43"
         },
         {
             "name": "phpunit/php-text-template",
@@ -2626,16 +2687,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d"
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/83fe1bdc5d47658b727595c14da140da92b3d66d",
-                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
                 "shasum": ""
             },
             "require": {
@@ -2663,7 +2724,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-06-13 07:35:30"
+            "time": "2015-06-21 08:01:12"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -2716,16 +2777,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.7.5",
+            "version": "4.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f6701ef3faea759acd1910a7751d8d102a7fd5bc"
+                "reference": "9b97f9d807b862c2de2a36e86690000801c85724"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f6701ef3faea759acd1910a7751d8d102a7fd5bc",
-                "reference": "f6701ef3faea759acd1910a7751d8d102a7fd5bc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b97f9d807b862c2de2a36e86690000801c85724",
+                "reference": "9b97f9d807b862c2de2a36e86690000801c85724",
                 "shasum": ""
             },
             "require": {
@@ -2784,26 +2845,27 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-21 07:23:36"
+            "time": "2015-07-13 11:28:34"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.4",
+            "version": "2.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35"
+                "reference": "18dfbcb81d05e2296c0bcddd4db96cade75e6f42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/92408bb1968a81b3217a6fdf6c1a198da83caa35",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/18dfbcb81d05e2296c0bcddd4db96cade75e6f42",
+                "reference": "18dfbcb81d05e2296c0bcddd4db96cade75e6f42",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "~1.0,>=1.0.2",
                 "php": ">=5.3.3",
-                "phpunit/php-text-template": "~1.2"
+                "phpunit/php-text-template": "~1.2",
+                "sebastian/exporter": "~1.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.4"
@@ -2839,20 +2901,20 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-06-11 15:55:48"
+            "time": "2015-07-10 06:54:24"
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "1dd8869519a225f7f2b9eb663e225298fade819e"
+                "reference": "937efb279bd37a375bcadf584dec0726f84dbf22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/1dd8869519a225f7f2b9eb663e225298fade819e",
-                "reference": "1dd8869519a225f7f2b9eb663e225298fade819e",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/937efb279bd37a375bcadf584dec0726f84dbf22",
+                "reference": "937efb279bd37a375bcadf584dec0726f84dbf22",
                 "shasum": ""
             },
             "require": {
@@ -2866,7 +2928,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -2903,7 +2965,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2015-01-29 16:28:08"
+            "time": "2015-07-26 15:48:44"
         },
         {
             "name": "sebastian/diff",
@@ -2959,16 +3021,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.2.2",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "5a8c7d31914337b69923db26c4221b81ff5a196e"
+                "reference": "4fe0a44cddd8cc19583a024bdc7374eb2fef0b87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/5a8c7d31914337b69923db26c4221b81ff5a196e",
-                "reference": "5a8c7d31914337b69923db26c4221b81ff5a196e",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/4fe0a44cddd8cc19583a024bdc7374eb2fef0b87",
+                "reference": "4fe0a44cddd8cc19583a024bdc7374eb2fef0b87",
                 "shasum": ""
             },
             "require": {
@@ -3005,20 +3067,20 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2015-01-01 10:01:08"
+            "time": "2015-07-26 06:42:57"
         },
         {
             "name": "sebastian/exporter",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "84839970d05254c73cde183a721c7af13aede943"
+                "reference": "7ae5513327cb536431847bcc0c10edba2701064e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/84839970d05254c73cde183a721c7af13aede943",
-                "reference": "84839970d05254c73cde183a721c7af13aede943",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/7ae5513327cb536431847bcc0c10edba2701064e",
+                "reference": "7ae5513327cb536431847bcc0c10edba2701064e",
                 "shasum": ""
             },
             "require": {
@@ -3071,7 +3133,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2015-01-27 07:23:06"
+            "time": "2015-06-21 07:55:53"
         },
         {
             "name": "sebastian/global-state",
@@ -3126,16 +3188,16 @@
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "3989662bbb30a29d20d9faa04a846af79b276252"
+                "reference": "994d4a811bafe801fb06dccbee797863ba2792ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/3989662bbb30a29d20d9faa04a846af79b276252",
-                "reference": "3989662bbb30a29d20d9faa04a846af79b276252",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/994d4a811bafe801fb06dccbee797863ba2792ba",
+                "reference": "994d4a811bafe801fb06dccbee797863ba2792ba",
                 "shasum": ""
             },
             "require": {
@@ -3175,7 +3237,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2015-01-24 09:48:32"
+            "time": "2015-06-21 08:04:50"
         },
         {
             "name": "sebastian/version",
@@ -3335,11 +3397,33 @@
             "time": "2015-06-24 03:16:23"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "v0.10.1",
+            "alias_normalized": "0.10.1.0",
+            "version": "dev-rc_stable_merged",
+            "package": "ongr/elasticsearch-bundle"
+        },
+        {
+            "alias": "dev-master",
+            "alias_normalized": "9999999-dev",
+            "version": "dev-suggester",
+            "package": "ongr/elasticsearch-dsl"
+        },
+        {
+            "alias": "v0.8.1",
+            "alias_normalized": "0.8.1.0",
+            "version": "dev-es-stable-rc",
+            "package": "ongr/connections-bundle"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "ongr/translations-bundle": 20,
-        "ongr/oxid-connector-bundle": 20
+        "ongr/oxid-connector-bundle": 20,
+        "ongr/elasticsearch-bundle": 20,
+        "ongr/elasticsearch-dsl": 20,
+        "ongr/connections-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
